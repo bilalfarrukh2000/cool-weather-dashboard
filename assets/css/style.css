@@ -130,6 +130,7 @@
   
   .five-cards{
     background-color: rgb(205, 232, 245);
+    height: 800px;
   }
    .col-sm div {
      font-weight: bold;

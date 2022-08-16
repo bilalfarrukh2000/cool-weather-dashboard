@@ -39,8 +39,8 @@ function citysearch() {
 
        
         $("#cityname").text(cityname);
-        $("#citytemp").text( $LiveTemp);
-        $("#cityhumidity").text( $LiveHumidity);
+        $("#tempcity").text($LiveTemp);
+        $("#humcity").text( $LiveHumidity);
         $("#windspeed").text( $LiveWind);
         $("#weathericon").attr({ "src": $LiveIconURL, "alt": "Current Weather Icon" });
     
