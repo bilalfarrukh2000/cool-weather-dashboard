@@ -35,7 +35,7 @@ function citysearch() {
         let $LiveHumidity = response.main.humidity + "%";
         let $LiveWind = parseInt(response.wind.speed) + "mph";
         let $LiveIcon = response.weather[0].icon;
-        let $LiveIconURL = "http://openweathermap.org/img/w/" + $LiveIcon + ".png";
+        let $LiveIconURL = "https://openweathermap.org/img/w/" + $LiveIcon + ".png";
 
        
         $("#cityname").text(cityname);
@@ -142,7 +142,7 @@ function citysearch() {
             icons = icons.filter(item => item);
           
             for (i = 0; i < icons.length; i++) {
-                iconsURL[i] = "http://openweathermap.org/img/w/" + icons[i] + ".png";
+                iconsURL[i] = "https://openweathermap.org/img/w/" + icons[i] + ".png";
             }
             for (i = 0; i < iconsURL.length; i++) {
                 $("#icon" + i).attr({ "src": iconsURL[i], "alt": "Daily Weather Icon" });
