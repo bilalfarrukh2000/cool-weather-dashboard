@@ -6,11 +6,27 @@
     <title></title>
 </head>
 
-<!-- Body-->
+<!--Body-->
 <body>
     <header><h1>Weather Dashboard</h1></header>
 
-   
+    <main class="container">
+        <section class="sidebar">
+            <h1>Search for a City</h1>
+            <input type="text" placeholder="San Diego">
+            <button class="search">Search</button>
+            <div class="solid"></div>
+        </section>
+        <section class="display-weather">
+            <div class="general"></div>
+            <h1>5-Day Forecast</h1>
+            <div class="five"></div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
