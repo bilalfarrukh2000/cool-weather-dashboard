@@ -40,3 +40,25 @@ function getData(city){
   
       displayData();
   }
+
+  //Displaying data in html
+
+function displayData(){
+
+    //Adding main data
+  
+    var currentTemp=Math.round(1.8*(cityData.main.temp-273)+32);
+    var currentWind=Math.round(cityData.wind.speed*2.237);
+    var currentHumidity=cityData.main.humidity;
+    var currentUvi=forecastData.current.uvi;
+    var icon=cityData.weather[0].icon;
+    var imgSrc="\"http://openweathermap.org/img/w/"+icon+".png\"";
+  
+    var generalHTML= 
+    "<h1>"+city+" "+currentDate+"<img src="+imgSrc+"></h1>"+
+    "<p>Temp: "+currentTemp+" &#8457</p>"+
+    "<p>Wind: "+currentWind+" mph</p>"+
+    "<p>Humidity: "+currentHumidity+"%</p>"+
+    "<p>UV Index: "+currentUvi+"</p>";
+  
+    $(".general").append(generalHTML);
