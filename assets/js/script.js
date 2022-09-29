@@ -24,3 +24,19 @@ function getData(city){
     lat=cityData.coord.lat;
     getForecastData();
   }
+
+  function getForecastData(){
+  
+    var url2="https://api.openweathermap.org/data/2.5/onecall?lat="+lat+"&lon="+long+"&appid=166d9ab93a294c2aa16185a2466084c7";
+  
+      $.ajax({
+        async: false,
+        type: 'GET',
+        url: url2,
+        success: function(data) {
+          forecastData=data;
+        }
+      });
+  
+      displayData();
+  }
