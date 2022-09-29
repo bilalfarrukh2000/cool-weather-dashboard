@@ -3,7 +3,7 @@ With the use of the OpenWeather One Call API, I was able to create a website tha
 
 
 # Screenshot
-![](/assets/images/cool-weather-screenshot.png)
+![](./assets/images/ScreenshotWeather.png)
 
 # Links
 
