@@ -62,3 +62,32 @@ function displayData(){
     "<p>UV Index: "+currentUvi+"</p>";
   
     $(".general").append(generalHTML);
+
+    //Adding Forecast Data
+  for(var i=1;i<6;i++){
+
+    currentDate=moment().add(i, 'days').format('l');
+    currentTemp=Math.round(1.8*(forecastData.daily[i].temp.max-273)+32);
+    currentWind=Math.round(forecastData.daily[i].wind_speed*2.237);
+    currentHumidity=forecastData.daily[i].humidity;
+    currentUvi=forecastData.daily[i].uvi;
+    icon=forecastData.daily[i].weather[0].icon;
+    imgSrc="\"http://openweathermap.org/img/w/"+icon+".png\"";
+
+    var forecastHTML=
+    "<article class='card'>"+
+    "<h1>"+currentDate+"</h1>"+
+    "<img src="+imgSrc+">"+
+    "<p>Temp: "+currentTemp+" &#8457</p>"+
+    "<p>Wind: "+currentWind+" mph</p>"+
+    "<p>Humidity: "+currentHumidity+"%</p>"+
+    "<p>UV Index: "+currentUvi+"</p>"+
+    "</article>";
+  
+    $(".five").append(forecastHTML);
+
+    
+  }
+
+  $(".display-weather").show();
+}
