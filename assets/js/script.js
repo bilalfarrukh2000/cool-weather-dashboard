@@ -91,3 +91,17 @@ function displayData(){
 
   $(".display-weather").show();
 }
+
+// Display search history 
+
+function showHistory(){
+
+    var vals = Object.values(localStorage);
+    var keys = Object.keys(localStorage);
+    var sizeofLocalStorage = Object.keys(localStorage).length;
+  
+    for(var i=0;i<sizeofLocalStorage;i++) {
+      var historyHTML = "<button class='history'>"+keys[i]+"</button>";
+      $(".sidebar").append(historyHTML);
+    }
+  }
