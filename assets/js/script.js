@@ -126,9 +126,9 @@ function showHistory(){
   })
   
   $(document).on('click', '.history', function(){ 
-    console.log("Shit");
+    
     city=$(this).text();
-    console.log(city);
+    
     $(".general").empty();
     $(".five").empty();
     
