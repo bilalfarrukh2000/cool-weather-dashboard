@@ -8,4 +8,5 @@ With the use of the OpenWeather One Call API, I was able to create a website tha
 # Links
 
 GitHub Repo Link: https://github.com/bilalfarrukh2000/cool-weather-dashboard
+
 Deployed URL: https://bilalfarrukh2000.github.io/cool-weather-dashboard/
