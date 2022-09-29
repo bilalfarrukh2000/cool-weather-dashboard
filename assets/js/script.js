@@ -105,3 +105,37 @@ function showHistory(){
       $(".sidebar").append(historyHTML);
     }
   }
+  $(".search").on("click", function (){
+    city=$("input").val();
+    $(".general").empty();
+    $(".five").empty();
+  
+    city.toLowerCase();
+  
+  
+    if(!(city in localStorage)){
+  
+      var historyHTML = "<button class='history'>"+city+"</button>";
+      $(".sidebar").append(historyHTML);
+      console.log("hello");
+    }
+    localStorage[city]="";
+    
+    getData(city);
+  
+  })
+  
+  $(document).on('click', '.history', function(){ 
+    console.log("Shit");
+    city=$(this).text();
+    console.log(city);
+    $(".general").empty();
+    $(".five").empty();
+    
+    getData(city);
+  });
+  
+  $(window).on('load', function(){
+    showHistory();
+  });
+  
